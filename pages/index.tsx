@@ -27,7 +27,7 @@ export default function Home({ data }) {
     id: 124,
     fullName: 'Lord Paulo the First',
     imageUrl: '/SerPaulo.jpg',
-    title: "First of his name, Last of his kind",
+    title: "half the twin",
     family: 'House Blackfyre'
   })
   const [state, setState] = useState(characters)
