@@ -17,19 +17,7 @@ export async function getServerSideProps() {
 export default function Home({ data }) {
   const [page, setPage] = useState({ start: 0, end: 4 })
   let characters = data.slice(page.start, page.end);
-  characters.push({
-    id: 123,
-    fullName: 'Ser Bikram Karki',
-    imageUrl: 'https://scontent.fhel1-1.fna.fbcdn.net/v/t1.18169-9/12246826_995719907136592_6493791260710503344_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=174925&_nc_ohc=5GKyxTrMoesAX_ZhNDD&_nc_oc=AQm1JPMEU4YhmY-BGGPCRyTqRTfvbBI2RBWkI22x6ufANdmEN6i9g-3y8trLIdVtlE75vyylSFu7H2fMAMwoYyIo&_nc_ht=scontent.fhel1-1.fna&oh=db62aa3e138c6d6e08cdc922a6084757&oe=6127E1E4',
-    title: 'Lord of the Blue Seas, White Sky, Red Blood',
-    family: 'House Chaudhary'
-  },{
-    id: 124,
-    fullName: 'Lord Paulo the First',
-    imageUrl: '/SerPaulo.jpg',
-    title: "half the twin",
-    family: 'House Blackfyre'
-  })
+
   const [state, setState] = useState(characters)
   const onLoadMore = () => {
     setPage({ start: page.start + 4, end: page.end + 4 })
